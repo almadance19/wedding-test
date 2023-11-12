@@ -137,7 +137,8 @@ function contactPartner(a){
  if (extractedProduct) {
     console.log('Got the id - ' + extractedProduct.id);
 
-    window.location.href = 'courses-details.html?productid='+extractedProduct.id;
+   window.location.href = 'courses-details.html?productid='+extractedProduct.id;
+    
   } else {
     console.log('Could not find id.');
   }
@@ -165,8 +166,8 @@ function call_product_http(db) {
                 postEl.querySelector(".sale-parice").textContent = post[7];
                 postEl.querySelector(".old-parice").textContent = post[12];
                 postEl.querySelector('.course_image').src = "assets/images/courses/"+post[11]+".webp";
-                postEl.querySelector(".course_photo").setAttribute("onclick","contactPartner('"+post[0]+"');");
-                postEl.querySelector(".check_course").setAttribute("onclick","contactPartner('"+post[0]+"');");
+                postEl.querySelector(".course_photo").setAttribute("onclick","contactPartner("+post[0]+");");
+                postEl.querySelector(".check_course").setAttribute("onclick","contactPartner("+post[0]+");");
 
        
             
@@ -227,8 +228,8 @@ function call_http_old_db(){
                 postEl.querySelector(".sale-parice").textContent = post[7];
                 postEl.querySelector(".old-parice").textContent = post[12];
                 postEl.querySelector('.course_image').src = "assets/images/courses/"+post[11]+".webp";
-                postEl.querySelector(".course_photo").setAttribute("onclick","contactPartner('"+post[0]+"');");
-                postEl.querySelector(".check_course").setAttribute("onclick","contactPartner('"+post[0]+"');");
+                postEl.querySelector(".course_photo").setAttribute("onclick","contactPartner("+post[0]+");");
+                postEl.querySelector(".check_course").setAttribute("onclick","contactPartner("+post[0]+");");
                 
                 listElement.append(postEl);
                 products.push(post);

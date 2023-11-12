@@ -8,6 +8,7 @@ let old_db_version;
 //let db = openRequest.result;
 //db.close();
 
+getProductData();
 
 // window.addEventListener('DOMContentLoaded', getInit);
 
@@ -20,13 +21,13 @@ let old_db_version;
 
 function getProductData() {
     const extractedProduct = JSON.parse(localStorage.getItem('active_product'));
-// if (extractedProduct) {
-//    console.log('Got the id - ' + extractedProduct.id);
+if (extractedProduct) {
+  console.log('Got the id - ' + extractedProduct.id);
 
-//    window.location = 'courses-details.html?productid='+extractedProduct.id;
-//  } else {
-//    console.log('Could not find id.');
-//  }
+  window.location = 'courses-details.html?productid='+extractedProduct.id;
+} else {
+  console.log('Could not find id.');
+}
 
 }
 
