@@ -23,7 +23,7 @@ function getProductData() {
    if (extractedProduct) {
        console.log('Got the id - ' + extractedProduct.id);
 
-        window.location = 'courses-details.html?productid='+extractedProduct.id;
+   
     } else {
         console.log('Could not find id.');
 
