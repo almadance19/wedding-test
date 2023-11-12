@@ -23,10 +23,12 @@ function getProductData() {
    if (extractedProduct) {
        console.log('Got the id - ' + extractedProduct.id);
 
-       postEl.src =extractedProduct.link_preview+"?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" 
+       vimeoIframe.src =extractedProduct.link_preview+"?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" 
    
     } else {
         console.log('Could not find id.');
+
+        vimeoIframe.src ="https://vimeo.com/883720173?"+"badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" 
 
         const queryString = window.location.search;
         console.log(queryString);
