@@ -15,21 +15,32 @@ const url_version ="https://script.google.com/macros/s/AKfycbz70KCClkMxIwfMWYlzc
 
 
 function getProductData() {
+    
+    
     const extractedProduct = JSON.parse(localStorage.getItem('active_product'));
-if (extractedProduct) {
-  console.log('Got the id - ' + extractedProduct.id);
+    
+    console.log('Got the id - ' + extractedProduct.id);
+    window.location = 'courses-details.html?productid='+extractedProduct.id;
 
-  window.location = 'courses-details.html?productid='+extractedProduct.id;
-} else {
-  console.log('Could not find id.');
+    const queryString = window.location.search;
+    console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    const param_value = urlParams.get('productid')
+    console.log("GET DATA FROM HTTP: "+param_value);
 
-  const queryString = window.location.search;
-  console.log(queryString);
-  const urlParams = new URLSearchParams(queryString);
-  const param_value = urlParams.get('productid')
-  console.log("GET DATA FROM HTTP: "+param_value);
 
-}
+// if (extractedProduct) {
+//   console.log('Got the id - ' + extractedProduct.id);
+
+//   window.location = 'courses-details.html?productid='+extractedProduct.id;
+// } else {
+//   console.log('Could not find id.');
+
+//   const queryString = window.location.search;
+//   console.log(queryString);
+//   const urlParams = new URLSearchParams(queryString);
+//   const param_value = urlParams.get('productid')
+//   console.log("GET DATA FROM HTTP: "+param_value);
 
 }
 
