@@ -137,7 +137,7 @@ function contactPartner(a){
  if (extractedProduct) {
     console.log('Got the id - ' + extractedProduct.id);
 
-    window.location = 'courses-details.html?productid='+extractedProduct.id;
+    window.location.href = 'courses-details.html?productid='+extractedProduct.id;
   } else {
     console.log('Could not find id.');
   }

@@ -9,24 +9,24 @@ let old_db_version;
 //db.close();
 
 
-window.addEventListener('DOMContentLoaded', getInit);
+// window.addEventListener('DOMContentLoaded', getInit);
 
-function getInit() {
-  //initPayPalButton();
-  getProductData();
+// function getInit() {
+//   //initPayPalButton();
+//   getProductData();
 
-};
+// };
 
 
 function getProductData() {
     const extractedProduct = JSON.parse(localStorage.getItem('active_product'));
-if (extractedProduct) {
-   console.log('Got the id - ' + extractedProduct.id);
+// if (extractedProduct) {
+//    console.log('Got the id - ' + extractedProduct.id);
 
-   window.location = 'courses-details.html?productid='+extractedProduct.id;
- } else {
-   console.log('Could not find id.');
- }
+//    window.location = 'courses-details.html?productid='+extractedProduct.id;
+//  } else {
+//    console.log('Could not find id.');
+//  }
 
 }
 
