@@ -34,4 +34,4 @@ function getProductData() {
         console.log("GET DATA FROM HTTP: "+param_value);
 
 }
-
+};
