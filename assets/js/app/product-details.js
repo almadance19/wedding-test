@@ -10,7 +10,7 @@ let old_db_version;
 
 
 
-// window.addEventListener('DOMContentLoaded', getInit);
+ window.addEventListener('DOMContentLoaded', getProductData);
 
 // function getInit() {
 //   //initPayPalButton();
@@ -27,6 +27,13 @@ if (extractedProduct) {
   window.location = 'courses-details.html?productid='+extractedProduct.id;
 } else {
   console.log('Could not find id.');
+
+  const queryString = window.location.search;
+  console.log(queryString);
+  const urlParams = new URLSearchParams(queryString);
+  const param_value = urlParams.get('productid')
+  console.log("GET DATA FROM HTTP: "+param_value);
+
 }
 
 }
