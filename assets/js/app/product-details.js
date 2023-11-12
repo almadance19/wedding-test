@@ -3,7 +3,7 @@ const products= [];
 const url_version ="https://script.google.com/macros/s/AKfycbz70KCClkMxIwfMWYlzcZ8BqVgzQtWu03Xa-EhmB5R91OeRulnFudVrl7O6_oTNi9hj/exec";
 
 
-
+const vimeoIframe = document.getElementById('iframe_vimeo');
 
  window.addEventListener('DOMContentLoaded', getProductData);
 
@@ -23,6 +23,7 @@ function getProductData() {
    if (extractedProduct) {
        console.log('Got the id - ' + extractedProduct.id);
 
+       postEl.src =extractedProduct.link_preview+"?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" 
    
     } else {
         console.log('Could not find id.');
