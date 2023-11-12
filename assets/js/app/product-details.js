@@ -8,7 +8,7 @@ let old_db_version;
 //let db = openRequest.result;
 //db.close();
 
-getProductData();
+
 
 // window.addEventListener('DOMContentLoaded', getInit);
 
