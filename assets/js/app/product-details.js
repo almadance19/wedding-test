@@ -16,17 +16,18 @@ const url_version ="https://script.google.com/macros/s/AKfycbz70KCClkMxIwfMWYlzc
 
 function getProductData() {
     
-    
-    const extractedProduct = JSON.parse(localStorage.getItem('active_product'));
-    
-    console.log('Got the id - ' + extractedProduct.id);
-    window.location = 'courses-details.html?productid='+extractedProduct.id;
+    console.log("HOLA ");
 
-    const queryString = window.location.search;
-    console.log(queryString);
-    const urlParams = new URLSearchParams(queryString);
-    const param_value = urlParams.get('productid')
-    console.log("GET DATA FROM HTTP: "+param_value);
+    // const extractedProduct = JSON.parse(localStorage.getItem('active_product'));
+
+    // console.log('Got the id - ' + extractedProduct.id);
+    // window.location = 'courses-details.html?productid='+extractedProduct.id;
+
+    // const queryString = window.location.search;
+    // console.log(queryString);
+    // const urlParams = new URLSearchParams(queryString);
+    // const param_value = urlParams.get('productid')
+    // console.log("GET DATA FROM HTTP: "+param_value);
 
 
 // if (extractedProduct) {
@@ -43,8 +44,4 @@ function getProductData() {
 //   console.log("GET DATA FROM HTTP: "+param_value);
 
 }
-
-
-// Check if Product in DB
-//Take Data to Localstorage
 
